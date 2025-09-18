@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Used Cars for Sale in UAE | 7 States Auto</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body style="background-color: #f4f4f4">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="container-fluid px-4 py-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- Section 1: Logo + Location (Left) -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="/home/index.html">
+              <h2 class="mb-0 fw-bold text-dark">7 States</h2>
+            </a>
+            <div class="dropdown d-none d-md-block">
+              <button
+                class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                  />
+                </svg>
+                Abu Dhabi
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Abu Dhabi</a></li>
+                <li><a class="dropdown-item" href="#">Dubai</a></li>
+                <li><a class="dropdown-item" href="#">Sharjah</a></li>
+                <li><a class="dropdown-item" href="#">Al Ain</a></li>
+                <li><a class="dropdown-item" href="#">Ajman</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section 2: Navigation Menu (Center) -->
+          <nav class="d-none d-lg-flex border border-primary rounded-pill">
+            <ul class="navbar-nav d-flex flex-row gap-4">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-primary fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Used cars</a
+                >
+                <div class="dropdown-menu mega-dropdown p-4">
+                  <div class="row">
+                    <!-- Used car by Location -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">
+                        Used car by Location
+                      </h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=uae"
+                        >UAE</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=abu-dhabi"
+                        >Abu Dhabi</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=al-ain"
+                        >Al Ain</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=ajman"
+                        >Ajman</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=dubai"
+                        >Dubai</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=fujairah"
+                        >Fujairah</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=ras-al-khaimah"
+                        >Ras al-Khaimah</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=sharjah"
+                        >Sharjah</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=umm-al-quwain"
+                        >Umm al-Quwain</a
+                      >
+                    </div>
+
+                    <!-- Used car by Makes -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">Used car by Makes</h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=toyota"
+                        >Toyota</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=mercedes-benz"
+                        >Mercedes-Benz</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=nissan"
+                        >Nissan</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=lexus"
+                        >Lexus</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=bmw"
+                        >BMW</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=ford"
+                        >Ford</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=land-rover"
+                        >Land Rover</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=hyundai"
+                        >Hyundai</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=chevrolet"
+                        >Chevrolet</a
+                      >
+                    </div>
+
+                    <!-- Used car by Models -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">
+                        Used car by Models
+                      </h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-land-cruiser"
+                        >Toyota Land Cruiser</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=nissan-patrol"
+                        >Nissan Patrol</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-prado"
+                        >Toyota Prado</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-camry"
+                        >Toyota Camry</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=nissan-altima"
+                        >Nissan Altima</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-rav4"
+                        >Toyota RAV 4</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=ford-mustang"
+                        >Ford Mustang</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-corolla"
+                        >Toyota Corolla</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-hilux"
+                        >Toyota Hilux</a
+                      >
+                    </div>
+
+                    <!-- Used car by Vehicle Type -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">
+                        Used car by Vehicle Type
+                      </h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=sedan"
+                        >Sedan</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=suv"
+                        >SUV/Crossover</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=hatchback"
+                        >Hatchback</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=coupe"
+                        >Coupe</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=convertible"
+                        >Convertible</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=pickup"
+                        >Pick up Truck</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=truck"
+                        >Truck</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=van"
+                        >Van</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=bus"
+                        >Bus</a
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Sell your car now button -->
+                  <div class="row mt-4">
+                    <div class="col-12 text-center">
+                      <button
+                        class="btn btn-primary px-4 py-2 rounded-pill"
+                        onclick="window.location.href='../sell-my-car/index.html'"
+                      >
+                        Sell your car now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >New Cars</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Browse New Cars</a></li>
+                  <li><a class="dropdown-item" href="#">Compare Cars</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-dark fw-medium"
+                  href="../value-my-car/index.html"
+                  >Value my car</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Services</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Car Services</a></li>
+                  <li><a class="dropdown-item" href="#">Insurance</a></li>
+                  <li><a class="dropdown-item" href="#">Finance</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Section 3: Auth + Sell Button (Right) -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Desktop Auth Links -->
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <a
+                href="../login/index.html"
+                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+              >
+                Login
+                <svg
+                  width="12"
+                  height="12"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="../signup/index.html"
+                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+              >
+                Sign Up
+                <svg
+                  width="12"
+                  height="12"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Sell My Car Button -->
+            <button
+              class="btn btn-primary d-flex align-items-center gap-2 px-4 py-2 rounded-pill"
+              onclick="window.location.href='../sell-my-car/index.html'"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-car-front"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"
+                />
+                <path
+                  d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848Z"
+                />
+              </svg>
+              Sell my car
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button
+              class="btn btn-outline-secondary d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Location Selection for Mobile -->
+        <div class="mb-4">
+          <h6 class="fw-semibold mb-2 text-muted">Location</h6>
+          <div class="dropdown w-100">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-between"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              <span class="d-flex align-items-center gap-2">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                  />
+                </svg>
+                Abu Dhabi
+              </span>
+            </button>
+            <ul class="dropdown-menu w-100">
+              <li><a class="dropdown-item" href="#">Abu Dhabi</a></li>
+              <li><a class="dropdown-item" href="#">Dubai</a></li>
+              <li><a class="dropdown-item" href="#">Sharjah</a></li>
+              <li><a class="dropdown-item" href="#">Al Ain</a></li>
+              <li><a class="dropdown-item" href="#">Ajman</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              href="#"
+              class="text-decoration-none d-block py-3 px-2 rounded text-primary fw-medium"
+              >Used cars</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="#"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >New Cars</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="#"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Value my car</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="#"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Services</a
+            >
+          </li>
+        </ul>
+
+        <hr class="my-4" />
+
+        <!-- Auth Links -->
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              href="../login/index.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium d-flex align-items-center justify-content-between"
+            >
+              Login
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="../signup/index.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium d-flex align-items-center justify-content-between"
+            >
+              Sign Up
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container-fluid py-4">
+      <div class="row">
+        <!-- Filters Sidebar -->
+        <div class="col-lg-3 col-md-4 mb-4">
+          <div class="filters-sidebar bg-white rounded-3 p-4 shadow-sm">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5 class="mb-0 fw-bold">Filters</h5>
+              <button class="btn btn-link text-primary p-0 clear-filters">
+                <small>Clear filters</small>
+              </button>
+            </div>
+
+            <!-- Sort By -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Sort by</h6>
+              <select class="form-select" id="sortBy">
+                <option value="relevance">Relevance</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="year-new">Year: Newest First</option>
+                <option value="year-old">Year: Oldest First</option>
+                <option value="mileage-low">Mileage: Low to High</option>
+              </select>
+            </div>
+
+            <!-- Search Your Car -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Search your car</h6>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="e.g. Audi Q7"
+                  id="carSearch"
+                />
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Make -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Make</h6>
+              <select class="form-select mb-2" id="makeFilter">
+                <option value="">All</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="toyota">Toyota</option>
+                <option value="nissan">Nissan</option>
+                <option value="lexus">Lexus</option>
+                <option value="ford">Ford</option>
+              </select>
+              <div class="selected-filters mt-2">
+                <span class="badge bg-primary me-2 mb-1"
+                  >Audi <i class="fas fa-times ms-1"></i
+                ></span>
+                <span class="badge bg-primary me-2 mb-1"
+                  >BMW <i class="fas fa-times ms-1"></i
+                ></span>
+              </div>
+            </div>
+
+            <!-- Model -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Model</h6>
+              <select class="form-select" id="modelFilter">
+                <option value="">All</option>
+                <option value="q3">Q3</option>
+                <option value="q5">Q5</option>
+                <option value="q7">Q7</option>
+                <option value="a4">A4</option>
+                <option value="a6">A6</option>
+              </select>
+            </div>
+
+            <!-- Price Range -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Price (AED)</h6>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <select class="form-select price-select" id="minPriceSelect">
+                    <option value="">Min: 40,500</option>
+                    <option value="40500">40,500</option>
+                    <option value="50000">50,000</option>
+                    <option value="100000">100,000</option>
+                    <option value="200000">200,000</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select class="form-select price-select" id="maxPriceSelect">
+                    <option value="">Max: 140,000</option>
+                    <option value="100000">100,000</option>
+                    <option value="140000">140,000</option>
+                    <option value="200000">200,000</option>
+                    <option value="500000">500,000</option>
+                  </select>
+                </div>
+              </div>
+              <div class="quick-select-section">
+                <h6 class="quick-select-title">Quick Select</h6>
+                <div class="quick-select-buttons">
+                  <button class="quick-select-btn" data-price="0-50000">
+                    Below AED 50K
+                  </button>
+                  <button class="quick-select-btn" data-price="50000-100000">
+                    AED 50K - 100K
+                  </button>
+                  <button class="quick-select-btn" data-price="100000-200000">
+                    AED 100K - 200K
+                  </button>
+                  <button class="quick-select-btn" data-price="200000+">
+                    AED 200K+
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Year Range -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Year</h6>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <select class="form-select price-select" id="minYear">
+                    <option value="">Min: 2016</option>
+                    <option value="2016">2016</option>
+                    <option value="2018">2018</option>
+                    <option value="2020">2020</option>
+                    <option value="2022">2022</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select class="form-select price-select" id="maxYear">
+                    <option value="">Max: 2025</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                  </select>
+                </div>
+              </div>
+              <div class="quick-select-section">
+                <h6 class="quick-select-title">Quick Select</h6>
+                <div class="quick-select-buttons">
+                  <button class="quick-select-btn" data-year="2020+">
+                    2020 & Newer
+                  </button>
+                  <button class="quick-select-btn" data-year="2015-2019">
+                    2015-2019
+                  </button>
+                  <button class="quick-select-btn" data-year="0-2015">
+                    Below 2015
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mileage -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Mileage (KM)</h6>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <select class="form-select price-select" id="minMileage">
+                    <option value="">Min: 10,000</option>
+                    <option value="10000">10,000</option>
+                    <option value="20000">20,000</option>
+                    <option value="50000">50,000</option>
+                    <option value="100000">100,000</option>
+                  </select>
+                </div>
+                <div class="col-6">
+                  <select class="form-select price-select" id="maxMileage">
+                    <option value="">Max: 40,000</option>
+                    <option value="40000">40,000</option>
+                    <option value="80000">80,000</option>
+                    <option value="120000">120,000</option>
+                    <option value="200000">200,000</option>
+                  </select>
+                </div>
+              </div>
+              <div class="quick-select-section">
+                <h6 class="quick-select-title">Quick Select</h6>
+                <div class="quick-select-buttons">
+                  <button class="quick-select-btn" data-mileage="0-20000">
+                    Below 20,000 KM
+                  </button>
+                  <button class="quick-select-btn" data-mileage="20000-50000">
+                    20,000 - 50,000 KM
+                  </button>
+                  <button class="quick-select-btn" data-mileage="50000-100000">
+                    50,000 - 100,000 KM
+                  </button>
+                  <button class="quick-select-btn" data-mileage="100000+">
+                    100,000+ KM
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Location</h6>
+              <select class="form-select" id="locationFilter">
+                <option value="">All</option>
+                <option value="abu-dhabi">Abu Dhabi</option>
+                <option value="dubai">Dubai</option>
+                <option value="sharjah">Sharjah</option>
+                <option value="al-ain">Al Ain</option>
+                <option value="ajman">Ajman</option>
+                <option value="fujairah">Fujairah</option>
+                <option value="ras-al-khaimah">Ras al-Khaimah</option>
+                <option value="umm-al-quwain">Umm al-Quwain</option>
+              </select>
+            </div>
+
+            <!-- Body Type -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Body Type</h6>
+              <div class="body-type-grid">
+                <div class="body-type-item" data-type="sedan">
+                  <div class="body-type-icon">
+                    <img src="/images//Body Type/Body Type/Sedan.svg" alt="" />
+                  </div>
+                  <span>Sedan</span>
+                </div>
+                <div class="body-type-item" data-type="suv">
+                  <div class="body-type-icon">
+                    <img src="/images/Body Type/Body Type/SUV.svg" alt="" />
+                  </div>
+                  <span>SUV</span>
+                </div>
+                <div class="body-type-item" data-type="coupe">
+                  <div class="body-type-icon">
+                    <img src="/images/Body Type/Body Type/Coupe.svg" alt="" />
+                  </div>
+                  <span>Coupe</span>
+                </div>
+                <div class="body-type-item" data-type="hatchback">
+                  <div class="body-type-icon">
+                    <img
+                      src="/images/Body Type/Body Type/Hatchback.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span>Hatchback</span>
+                </div>
+                <div class="body-type-item" data-type="convertible">
+                  <div class="body-type-icon">
+                    <img
+                      src="/images/Body Type/Body Type/Convertible.svg"
+                      alt=""
+                    />
+                  </div>
+                  <span>Convertible</span>
+                </div>
+                <div class="body-type-item" data-type="wagon">
+                  <div class="body-type-icon">
+                    <img src="/images/Body Type/Body Type/Wagon.svg" alt="" />
+                  </div>
+                  <span>Wagon</span>
+                </div>
+                <div class="body-type-item" data-type="pickup">
+                  <div class="body-type-icon">
+                    <img src="/images/Body Type/Body Type/Pickup.svg" alt="" />
+                  </div>
+                  <span>Pickup</span>
+                </div>
+                <div class="body-type-item" data-type="minivan">
+                  <div class="body-type-icon">
+                    <img src="/images/Body Type/Body Type/Minivan.svg" alt="" />
+                  </div>
+                  <span>Minivan</span>
+                </div>
+                <div class="body-type-item" data-type="van">
+                  <div class="body-type-icon">
+                    <img src="/images/Body Type/Body Type/Van.svg" alt="" />
+                  </div>
+                  <span>Van</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Fuel Type -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Fuel Type</h6>
+              <div class="fuel-type-buttons">
+                <button class="fuel-type-btn active" data-fuel="petrol">
+                  Petrol
+                </button>
+                <button class="fuel-type-btn" data-fuel="electric">
+                  Electric
+                </button>
+                <button class="fuel-type-btn" data-fuel="diesel">Diesel</button>
+                <button class="fuel-type-btn" data-fuel="hybrid">Hybrid</button>
+              </div>
+            </div>
+
+            <!-- Body Color -->
+            <div class="filter-section mb-4">
+              <h6 class="filter-title">Body Color</h6>
+              <div class="color-grid">
+                <div class="color-item" data-color="white">
+                  <div
+                    class="color-circle"
+                    style="background-color: #ffffff; border: 1px solid #e5e7eb"
+                  ></div>
+                  <span>White</span>
+                </div>
+                <div class="color-item" data-color="black">
+                  <div
+                    class="color-circle"
+                    style="background-color: #000000"
+                  ></div>
+                  <span>Black</span>
+                </div>
+                <div class="color-item" data-color="gray">
+                  <div
+                    class="color-circle"
+                    style="background-color: #6b7280"
+                  ></div>
+                  <span>Gray</span>
+                </div>
+                <div class="color-item" data-color="silver">
+                  <div
+                    class="color-circle"
+                    style="background-color: #c0c0c0"
+                  ></div>
+                  <span>Silver</span>
+                </div>
+                <div class="color-item" data-color="red">
+                  <div
+                    class="color-circle"
+                    style="background-color: #dc2626"
+                  ></div>
+                  <span>Red</span>
+                </div>
+                <div class="color-item" data-color="blue">
+                  <div
+                    class="color-circle"
+                    style="background-color: #2563eb"
+                  ></div>
+                  <span>Blue</span>
+                </div>
+                <div class="color-item" data-color="brown">
+                  <div
+                    class="color-circle"
+                    style="background-color: #92400e"
+                  ></div>
+                  <span>Brown</span>
+                </div>
+                <div class="color-item" data-color="green">
+                  <div
+                    class="color-circle"
+                    style="background-color: #16a34a"
+                  ></div>
+                  <span>Green</span>
+                </div>
+                <div class="color-item" data-color="gold">
+                  <div
+                    class="color-circle"
+                    style="background-color: #eab308"
+                  ></div>
+                  <span>Gold</span>
+                </div>
+                <div class="color-item" data-color="burgundy">
+                  <div
+                    class="color-circle"
+                    style="background-color: #7c2d12"
+                  ></div>
+                  <span>Burgundy</span>
+                </div>
+                <div class="color-item" data-color="orange">
+                  <div
+                    class="color-circle"
+                    style="background-color: #ea580c"
+                  ></div>
+                  <span>Orange</span>
+                </div>
+                <div class="color-item" data-color="yellow">
+                  <div
+                    class="color-circle"
+                    style="background-color: #facc15"
+                  ></div>
+                  <span>Yellow</span>
+                </div>
+                <div class="color-item" data-color="purple">
+                  <div
+                    class="color-circle"
+                    style="background-color: #7c3aed"
+                  ></div>
+                  <span>Purple</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Transmission -->
+            <div class="filter-section">
+              <h6 class="filter-title">Transmission</h6>
+              <div class="transmission-buttons">
+                <button
+                  class="transmission-btn active"
+                  data-transmission="automatic"
+                >
+                  Automatic
+                </button>
+                <button class="transmission-btn" data-transmission="manual">
+                  Manual
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Car Listings -->
+        <div class="col-lg-9 col-md-8">
+          <!-- Results Header -->
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h4 class="mb-0 fw-bold" id="resultsCount">5,640 Used cars</h4>
+            <div class="d-flex align-items-center gap-3">
+              <button
+                class="btn btn-outline-secondary btn-sm view-toggle active"
+                data-view="grid"
+              >
+                <i class="fas fa-th"></i> View
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-sm view-toggle"
+                data-view="list"
+              >
+                <i class="fas fa-list"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Car Grid -->
+          <div class="car-grid" id="carGrid">
+            <!-- Car Card 1 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(1, 'Audi Q3 Sportback', '94,900')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop"
+                  alt="Audi Q3 Sportback"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Audi Q3 Sportback</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 94,900</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
+                  <span><i class="fas fa-tachometer-alt me-1"></i> 0 km</span>
+                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 2 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(2, 'Audi A4 Premium Plus 2024', '111,400')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop"
+                  alt="Audi A4 Premium Plus"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Audi A4 Premium Plus 2024</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 111,400</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
+                  <span><i class="fas fa-tachometer-alt me-1"></i> 0 km</span>
+                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 3 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(3, 'Audi Q3 Sportback', '150,800')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&h=250&fit=crop"
+                  alt="Audi Q3 Sportback"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Audi Q3 Sportback</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 150,800</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
+                  <span><i class="fas fa-tachometer-alt me-1"></i> 0 km</span>
+                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 4 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(4, 'BMW X5 M Sport', '185,000')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=400&h=250&fit=crop"
+                  alt="BMW X5 M Sport"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">BMW X5 M Sport</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 185,000</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
+                  <span
+                    ><i class="fas fa-tachometer-alt me-1"></i> 15,000 km</span
+                  >
+                  <span
+                    ><i class="fas fa-map-marker-alt me-1"></i> Abu Dhabi</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 5 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(5, 'Mercedes-Benz C-Class', '125,000')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=400&h=250&fit=crop"
+                  alt="Mercedes-Benz C-Class"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Mercedes-Benz C-Class</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 125,000</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
+                  <span
+                    ><i class="fas fa-tachometer-alt me-1"></i> 8,000 km</span
+                  >
+                  <span
+                    ><i class="fas fa-map-marker-alt me-1"></i> Sharjah</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 6 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(6, 'Toyota Land Cruiser', '220,000')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=250&fit=crop"
+                  alt="Toyota Land Cruiser"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Toyota Land Cruiser</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 220,000</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2022</span>
+                  <span
+                    ><i class="fas fa-tachometer-alt me-1"></i> 25,000 km</span
+                  >
+                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 7 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(7, 'Nissan Patrol Platinum', '195,000')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=400&h=250&fit=crop"
+                  alt="Nissan Patrol Platinum"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Nissan Patrol Platinum</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 195,000</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
+                  <span
+                    ><i class="fas fa-tachometer-alt me-1"></i> 12,000 km</span
+                  >
+                  <span><i class="fas fa-map-marker-alt me-1"></i> Al Ain</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 8 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(8, 'Lexus ES 350', '145,000')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1563720223185-11003d516935?w=400&h=250&fit=crop"
+                  alt="Lexus ES 350"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Lexus ES 350</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 145,000</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2023</span>
+                  <span
+                    ><i class="fas fa-tachometer-alt me-1"></i> 5,000 km</span
+                  >
+                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Car Card 9 -->
+            <div
+              class="car-card bg-white rounded-3 shadow-sm overflow-hidden"
+              onclick="openCarDetails(9, 'Ford Mustang GT', '165,000')"
+              style="cursor: pointer"
+            >
+              <div class="car-image-container position-relative">
+                <img
+                  src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=400&h=250&fit=crop"
+                  alt="Ford Mustang GT"
+                  class="car-image"
+                />
+                <button
+                  class="btn btn-sm btn-light favorite-btn position-absolute"
+                  onclick="event.stopPropagation();"
+                >
+                  <i class="far fa-heart"></i>
+                </button>
+              </div>
+              <div class="car-details p-3">
+                <h6 class="car-title mb-2">Ford Mustang GT</h6>
+                <p class="car-price mb-2 fw-bold text-primary">AED 165,000</p>
+                <div
+                  class="car-specs d-flex justify-content-between text-muted small"
+                >
+                  <span><i class="fas fa-calendar me-1"></i> 2024</span>
+                  <span
+                    ><i class="fas fa-tachometer-alt me-1"></i> 2,000 km</span
+                  >
+                  <span><i class="fas fa-map-marker-alt me-1"></i> Dubai</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="d-flex justify-content-center mt-5">
+            <nav aria-label="Car listings pagination">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">PREV</span>
+                  </a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">...</a></li>
+                <li class="page-item"><a class="page-link" href="#">50</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">NEXT</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <!-- Results Summary -->
+          <div class="text-center mt-4">
+            <p class="text-muted">24,050 Result</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Company -->
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h6 class="fw-bold mb-3">Company</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">About Us</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Terms & Condition</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Account Sign In</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Advertise with Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Dealer Directory</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Used cars by location -->
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h6 class="fw-bold mb-3">Used cars by location</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Abu Dhabi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Al Ain</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Ajman</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Dubai</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Fujairah</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Ras al-Khaimah</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Sharjah</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Umm al-Quwain</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular used makes -->
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h6 class="fw-bold mb-3">Popular used makes</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none">Toyota</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Mercedes-Benz</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Nissan</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Lexus</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">BMW</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Ford</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Land Rover</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Hyundai</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Chevrolet</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Mitsubishi</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Honda</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Porsche</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular used Models -->
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h6 class="fw-bold mb-3">Popular used Models</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Toyota Land Cruiser</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Nissan Patrol</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Toyota Prado</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Toyota Camry</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Nissan Altima</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Toyota RAV 4</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Ford Mustang</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Toyota Corolla</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Toyota Hilux</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Jeep Wrangler</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Mitsubishi Pajero</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Lexus LX0</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Site Map -->
+          <div class="col-lg-2 col-md-4 col-6 mb-4">
+            <h6 class="fw-bold mb-3">Site Map</h6>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Used Cars</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">New Cars</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >New Car for Business</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none">Car News</a>
+              </li>
+              <li>
+                <a href="#" class="text-light text-decoration-none"
+                  >Sell your car in the UAE</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Download App -->
+          <div class="col-lg-2 col-md-4 col-12 mb-4">
+            <h6 class="fw-bold mb-3">Download our Application</h6>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="text-decoration-none">
+                <img
+                  src="https://via.placeholder.com/120x40/000000/FFFFFF?text=Google+Play"
+                  alt="Google Play"
+                  class="img-fluid"
+                />
+              </a>
+              <a href="#" class="text-decoration-none">
+                <img
+                  src="https://via.placeholder.com/120x40/000000/FFFFFF?text=App+Store"
+                  alt="App Store"
+                  class="img-fluid"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <hr class="my-4" />
+        <div class="text-center">
+          <p class="mb-0 small">
+            Dubicars.com © 2022. All rights reserved. Address: 2513, Shatha
+            Tower, Media City, Dubai, UAE
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

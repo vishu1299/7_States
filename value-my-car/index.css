@@ -1,0 +1,772 @@
+/* Custom styles for 7 States project */
+
+/* Header Styles */
+header {
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #ffffff !important;
+  z-index: 1000;
+  position: relative;
+}
+
+/* Dropdown Z-index Fix */
+.mega-dropdown {
+  z-index: 9999 !important;
+}
+
+.dropdown-menu {
+  z-index: 9999 !important;
+}
+
+/* Logo Styles */
+header h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Location Button Styles */
+.dropdown .btn {
+  border: 1px solid #d1d5db;
+  border-radius: 50px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dropdown .btn:hover {
+  border-color: #9ca3af;
+  background-color: #f9fafb;
+}
+
+/* Navigation Styles */
+.navbar-nav .nav-link {
+  color: #374151 !important;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #1f2937 !important;
+}
+
+/* Auth Links Styles */
+.auth-link {
+  color: #374151;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s ease;
+}
+
+.auth-link:hover {
+  color: #1f2937;
+}
+
+/* Sell My Car Button Styles */
+.btn-primary {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Menu Toggle */
+.btn-outline-secondary {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 12px;
+  color: #374151;
+  background-color: #ffffff;
+}
+
+.btn-outline-secondary:hover {
+  border-color: #9ca3af;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #2c2c2c !important;
+}
+
+footer h6 {
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 1rem;
+}
+
+footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+footer ul li a {
+  font-size: 13px;
+  color: #cccccc !important;
+  transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+  color: #ffffff !important;
+}
+
+/* Hero Section */
+.value-hero-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Valuation Section */
+.valuation-section {
+  padding: 60px 0;
+  background-color: white;
+}
+
+/* Why Value Section */
+.why-value-section {
+  padding-right: 2rem;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.feature-icon.text-warning {
+  background-color: rgba(245, 158, 11, 0.1);
+}
+
+.feature-icon.text-info {
+  background-color: rgba(59, 130, 246, 0.1);
+}
+
+.feature-icon.text-primary {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.feature-icon.text-success {
+  background-color: rgba(34, 197, 94, 0.1);
+}
+
+.feature-content h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.feature-content p {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* How It Works */
+.how-it-works {
+  margin-top: 3rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.step-number {
+  width: 30px;
+  height: 30px;
+  background-color: #2563eb;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.step-content h6 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.step-content p {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Valuation Form */
+.valuation-form-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* Stepper Styles */
+.stepper-container {
+  margin-bottom: 2rem;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e9ecef;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-number {
+  background: #2563eb;
+  color: white;
+}
+
+.step.completed .step-number {
+  background: #28a745;
+  color: white;
+}
+
+.step-label {
+  font-size: 12px;
+  color: #6c757d;
+  text-align: center;
+  font-weight: 500;
+}
+
+.step.active .step-label {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.step.completed .step-label {
+  color: #28a745;
+}
+
+.step-line {
+  width: 60px;
+  height: 2px;
+  background: #e9ecef;
+  margin: 0 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.step-line.completed {
+  background: #28a745;
+}
+
+/* Form Steps */
+.form-step {
+  display: none;
+}
+
+.form-step.active {
+  display: block;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-header h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #f8f9fa;
+  color: #1d4ed8;
+}
+
+.form-label {
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.form-check {
+  margin-bottom: 0.5rem;
+}
+
+.form-check-input:checked {
+  background-color: #2563eb;
+  border-color: #2563eb;
+}
+
+.form-check-label {
+  font-size: 0.9rem;
+  color: #374151;
+  margin-left: 0.5rem;
+}
+
+.value-btn {
+  background-color: #2563eb;
+  border-color: #2563eb;
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.value-btn:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Step 2: Price Estimation Styles */
+.price-estimation-content {
+  text-align: center;
+}
+
+.estimation-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.price-input-section {
+  margin-bottom: 2rem;
+}
+
+.price-label {
+  font-size: 1rem;
+  color: #374151;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.optional-text {
+  color: #9ca3af;
+  font-weight: 400;
+}
+
+.price-input-container {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.price-input {
+  border: 2px solid #e5e7eb;
+  border-radius: 50px;
+  padding: 12px 60px 12px 20px;
+  font-size: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.price-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+.currency-prefix {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.illustration-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.thinking-svg,
+.car-sale-svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Step 3: Final Result Styles */
+.final-result-content {
+  text-align: center;
+}
+
+.result-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  line-height: 1.3;
+}
+
+.price-result {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border: 2px solid #0ea5e9;
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.price-result .currency {
+  font-size: 1.25rem;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.price-result .amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0c4a6e;
+  margin: 0 0.5rem;
+}
+
+.price-result .range {
+  font-size: 1.25rem;
+  color: #0369a1;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.action-buttons .btn {
+  flex: 1;
+  max-width: 150px;
+}
+
+/* Footer */
+footer {
+  background-color: #1f2937 !important;
+}
+
+footer h5,
+footer h6 {
+  color: white;
+  font-weight: 600;
+}
+
+footer .text-light {
+  color: #d1d5db !important;
+  text-decoration: none;
+}
+
+footer .text-light:hover {
+  color: white !important;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 35px;
+  transition: background-color 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: #2563eb;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  /* Tablet adjustments */
+  header h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile header adjustments */
+  header .container-fluid {
+    padding: 1rem 1.5rem;
+  }
+
+  header h2 {
+    font-size: 1.25rem;
+  }
+
+  /* Mobile sell button */
+  .btn-primary {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  /* Mobile menu toggle */
+  .btn-outline-secondary {
+    padding: 10px 12px;
+  }
+
+  /* Hero section mobile */
+  .value-hero-section {
+    padding: 40px 0 30px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  /* Valuation section mobile */
+  .valuation-section {
+    padding: 40px 0;
+  }
+
+  .why-value-section {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .valuation-form-container {
+    padding: 1.5rem;
+  }
+
+  .radio-group {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  /* Mobile stepper adjustments */
+  .stepper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .step-line {
+    width: 2px;
+    height: 30px;
+    margin: 0;
+  }
+
+  .step-number {
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .step-label {
+    font-size: 11px;
+  }
+
+  /* Mobile form adjustments */
+  .estimation-title {
+    font-size: 1.5rem;
+  }
+
+  .result-title {
+    font-size: 1.5rem;
+  }
+
+  .price-result .amount {
+    font-size: 2rem;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-buttons .btn {
+    max-width: none;
+  }
+
+  .thinking-svg,
+  .car-sale-svg {
+    width: 250px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Small mobile adjustments */
+  header .container-fluid {
+    padding: 0.75rem 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .valuation-form-container {
+    padding: 1rem;
+  }
+
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+
+  .step-number {
+    width: 25px;
+    height: 25px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Mega Dropdown Styles */
+.mega-dropdown {
+  min-width: 800px;
+  max-width: 900px;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+}
+
+.mega-dropdown .dropdown-header {
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  padding: 0;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.5rem;
+}
+
+.mega-dropdown .dropdown-item {
+  color: #6b7280;
+  font-size: 13px;
+  padding: 0.4rem 0;
+  border: none;
+  background: none;
+  transition: all 0.2s ease;
+}
+
+.mega-dropdown .dropdown-item:hover {
+  color: #2563eb;
+  background-color: transparent;
+  padding-left: 0.5rem;
+}

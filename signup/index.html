@@ -1,0 +1,2302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - 7 States</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        background-color: #f8f9fa;
+      }
+
+      .login-container {
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-width: 1000px;
+        margin: 20px auto;
+        background: white;
+      }
+
+      .image-section {
+        background: url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80")
+          center/cover;
+        height: 100%;
+        border-radius: 20px 0 0 20px;
+      }
+
+      .form-section {
+        padding: 60px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
+
+      .login-title {
+        font-size: 28px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .form-label {
+        font-weight: 500;
+        color: #666;
+        margin-bottom: 8px;
+        font-size: 14px;
+      }
+
+      .phone-input-container {
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 50px;
+      }
+
+      .country-code {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 12px;
+        background-color: #f8f9fa;
+        border-right: 1px solid #ddd;
+        font-weight: 500;
+        color: #333;
+        min-width: 80px;
+        justify-content: center;
+      }
+
+      .flag-icon {
+        width: 20px;
+        height: 15px;
+        border-radius: 2px;
+      }
+
+      .phone-input {
+        flex: 1;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding: 0 12px;
+        font-size: 16px;
+        background-color: white;
+      }
+
+      .phone-input:focus {
+        outline: none;
+      }
+
+      .phone-input-container:focus-within {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+
+      /* Email and Password Input Styles */
+      .form-control {
+        height: 50px;
+        border: 1px solid #ddd !important;
+        border-radius: 8px !important;
+        padding: 0 12px !important;
+        font-size: 16px !important;
+        background-color: white !important;
+      }
+
+      .form-control:focus {
+        border-color: #007bff !important;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+        outline: none !important;
+      }
+
+      .form-control::placeholder {
+        color: #999 !important;
+      }
+
+      .continue-btn {
+        height: 50px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .continue-btn:hover {
+        background-color: #0056b3;
+      }
+
+      .divider {
+        text-align: center;
+        margin: 20px 0;
+        position: relative;
+      }
+
+      .divider::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: #ddd;
+      }
+
+      .divider span {
+        background: white;
+        padding: 0 15px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .social-btn {
+        height: 50px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-weight: 500;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .social-btn:hover {
+        background-color: #f8f9fa;
+        border-color: #ccc;
+      }
+
+      .terms-text {
+        font-size: 12px;
+        color: #666;
+        text-align: center;
+        margin: 20px 0;
+      }
+
+      .terms-text a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .signup-link {
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+      }
+
+      .signup-link a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      /* Email Form Styles */
+      .login-form {
+        display: none;
+      }
+
+      .login-form.active {
+        display: block;
+      }
+
+      .password-input-container {
+        position: relative;
+      }
+
+      .password-toggle {
+        position: absolute;
+        right: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+      }
+
+      .password-toggle:hover {
+        color: #495057;
+      }
+
+      /* Password fields row styling */
+      .row.mb-3 .col-md-6 {
+        padding-right: 8px;
+        padding-left: 8px;
+      }
+
+      .row.mb-3 .col-md-6:first-child {
+        padding-left: 0;
+      }
+
+      .row.mb-3 .col-md-6:last-child {
+        padding-right: 0;
+      }
+
+      /* Mobile responsive for password fields */
+      @media (max-width: 768px) {
+        .row.mb-3 .col-md-6 {
+          padding-right: 0;
+          padding-left: 0;
+          margin-bottom: 15px;
+        }
+
+        .row.mb-3 .col-md-6:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .back-btn {
+        color: #666;
+        text-decoration: none;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+      }
+
+      .back-btn:hover {
+        color: #007bff;
+      }
+
+      /* Modal Styles */
+      .modal-content {
+        border-radius: 15px;
+        border: none;
+      }
+
+      .otp-inputs {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin: 20px 0;
+      }
+
+      .otp-input {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .otp-input:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+
+      .phone-illustration {
+        width: 80px;
+        height: 80px;
+        background: #f8f9fa;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px;
+        font-size: 24px;
+        color: #007bff;
+      }
+
+      /* OTP Method Selection Styles */
+      .otp-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #007bff, #0056b3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: white;
+        font-size: 24px;
+      }
+
+      .otp-method-selection {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .method-option {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        border: 2px solid #e9ecef;
+        border-radius: 12px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: white;
+      }
+
+      .method-option:hover {
+        border-color: #007bff;
+        background: #f8f9ff;
+      }
+
+      .method-option.active {
+        border-color: #007bff;
+        background: #f8f9ff;
+      }
+
+      .method-icon {
+        width: 40px;
+        height: 40px;
+        background: #f8f9fa;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 12px;
+        color: #6c757d;
+        font-size: 18px;
+      }
+
+      .method-option.active .method-icon {
+        background: #007bff;
+        color: white;
+      }
+
+      .method-details {
+        flex: 1;
+        text-align: left;
+      }
+
+      .method-title {
+        font-weight: 600;
+        color: #212529;
+        margin-bottom: 2px;
+      }
+
+      .method-value {
+        font-size: 14px;
+        color: #6c757d;
+      }
+
+      .method-radio {
+        color: #007bff;
+        font-size: 20px;
+      }
+
+      .method-option:not(.active) .method-radio {
+        color: #dee2e6;
+      }
+
+      /* Success Modal Styles */
+      .success-modal .modal-content {
+        border-radius: 20px;
+        padding: 10px 20px 30px;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .success-modal .modal-header {
+        justify-content: center;
+        position: relative;
+        padding: 20px 20px 10px;
+      }
+
+      .success-modal .btn-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        margin: 0;
+      }
+
+      .car-illustration {
+        width: 250px;
+        height: 150px;
+        margin: 20px auto 30px;
+        position: relative;
+      }
+
+      .car-illustration svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .success-checkmark {
+        position: absolute;
+        top: -5px;
+        right: 10px;
+        width: 45px;
+        height: 45px;
+        background: #28a745;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 20px;
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+        border: 3px solid white;
+      }
+
+      .success-title {
+        font-size: 24px;
+        font-weight: 600;
+        color: #333;
+        margin: 0;
+      }
+
+      .success-subtitle {
+        font-size: 16px;
+        color: #666;
+        margin: 0;
+      }
+
+      .explore-btn {
+        background: #007bff;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 50px;
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
+        width: 80%;
+        max-width: 250px;
+      }
+
+      .explore-btn:hover {
+        background: #0056b3;
+        color: white;
+      }
+
+      /* Header Dropdown Z-index Fix */
+      .mega-dropdown {
+        z-index: 9999 !important;
+      }
+
+      .dropdown-menu {
+        z-index: 9999 !important;
+      }
+
+      /* Ensure header is above other content */
+      header {
+        z-index: 1000;
+        position: relative;
+      }
+
+      @media (max-width: 768px) {
+        .login-container {
+          margin: 0;
+          border-radius: 0;
+          height: 100vh;
+        }
+
+        .image-section {
+          display: none;
+        }
+
+        .form-section {
+          padding: 40px 30px;
+        }
+      }
+    </style>
+  </head>
+  <body style="background-color: #f4f4f4">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+      <div class="container-fluid px-4 py-3">
+        <div class="d-flex align-items-center justify-content-between">
+          <!-- Section 1: Logo + Location (Left) -->
+          <div class="d-flex align-items-center gap-3">
+            <a href="../home/index.html">
+              <h2 class="mb-0 fw-bold text-dark">7 States</h2>
+            </a>
+            <div class="dropdown d-none d-md-block">
+              <button
+                class="btn btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2"
+                type="button"
+                data-bs-toggle="dropdown"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                  />
+                </svg>
+                Abu Dhabi
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Abu Dhabi</a></li>
+                <li><a class="dropdown-item" href="#">Dubai</a></li>
+                <li><a class="dropdown-item" href="#">Sharjah</a></li>
+                <li><a class="dropdown-item" href="#">Al Ain</a></li>
+                <li><a class="dropdown-item" href="#">Ajman</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Section 2: Navigation Menu (Center) -->
+          <nav class="d-none d-lg-flex border border-primary rounded-pill">
+            <ul class="navbar-nav d-flex flex-row gap-4">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Used cars</a
+                >
+                <div class="dropdown-menu mega-dropdown p-4">
+                  <div class="row">
+                    <!-- Used car by Location -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">
+                        Used car by Location
+                      </h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=uae"
+                        >UAE</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=abu-dhabi"
+                        >Abu Dhabi</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=al-ain"
+                        >Al Ain</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=ajman"
+                        >Ajman</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=dubai"
+                        >Dubai</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=fujairah"
+                        >Fujairah</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=ras-al-khaimah"
+                        >Ras al-Khaimah</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=sharjah"
+                        >Sharjah</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=location&value=umm-al-quwain"
+                        >Umm al-Quwain</a
+                      >
+                    </div>
+
+                    <!-- Used car by Makes -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">Used car by Makes</h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=toyota"
+                        >Toyota</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=mercedes-benz"
+                        >Mercedes-Benz</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=nissan"
+                        >Nissan</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=lexus"
+                        >Lexus</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=bmw"
+                        >BMW</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=ford"
+                        >Ford</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=land-rover"
+                        >Land Rover</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=hyundai"
+                        >Hyundai</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=make&value=chevrolet"
+                        >Chevrolet</a
+                      >
+                    </div>
+
+                    <!-- Used car by Models -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">
+                        Used car by Models
+                      </h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-land-cruiser"
+                        >Toyota Land Cruiser</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=nissan-patrol"
+                        >Nissan Patrol</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-prado"
+                        >Toyota Prado</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-camry"
+                        >Toyota Camry</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=nissan-altima"
+                        >Nissan Altima</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-rav4"
+                        >Toyota RAV 4</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=ford-mustang"
+                        >Ford Mustang</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-corolla"
+                        >Toyota Corolla</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=model&value=toyota-hilux"
+                        >Toyota Hilux</a
+                      >
+                    </div>
+
+                    <!-- Used car by Vehicle Type -->
+                    <div class="col-md-3">
+                      <h6 class="dropdown-header fw-bold">
+                        Used car by Vehicle Type
+                      </h6>
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=sedan"
+                        >Sedan</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=suv"
+                        >SUV/Crossover</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=hatchback"
+                        >Hatchback</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=coupe"
+                        >Coupe</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=convertible"
+                        >Convertible</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=pickup"
+                        >Pick up Truck</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=truck"
+                        >Truck</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=van"
+                        >Van</a
+                      >
+                      <a
+                        class="dropdown-item"
+                        href="../used-cars/index.html?filter=type&value=bus"
+                        >Bus</a
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Sell your car now button -->
+                  <div class="row mt-4">
+                    <div class="col-12 text-center">
+                      <button
+                        class="btn btn-primary px-4 py-2 rounded-pill"
+                        onclick="window.location.href='../sell-my-car/index.html'"
+                      >
+                        Sell your car now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >New Cars</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Browse New Cars</a></li>
+                  <li><a class="dropdown-item" href="#">Compare Cars</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-dark fw-medium"
+                  href="../value-my-car/index.html"
+                  >Value my car</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle text-dark fw-medium"
+                  href="#"
+                  data-bs-toggle="dropdown"
+                  >Services</a
+                >
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Car Services</a></li>
+                  <li><a class="dropdown-item" href="#">Insurance</a></li>
+                  <li><a class="dropdown-item" href="#">Finance</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Section 3: Auth + Sell Button (Right) -->
+          <div class="d-flex align-items-center gap-3">
+            <!-- Desktop Auth Links -->
+            <div class="d-none d-lg-flex align-items-center gap-3">
+              <a
+                href="../login/index.html"
+                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+              >
+                Login
+                <svg
+                  width="12"
+                  height="12"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="index.html"
+                class="text-decoration-none text-dark fw-medium d-flex align-items-center gap-1"
+              >
+                Sign Up
+                <svg
+                  width="12"
+                  height="12"
+                  fill="currentColor"
+                  class="bi bi-arrow-up-right"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <!-- Sell My Car Button -->
+            <button
+              class="btn btn-primary d-flex align-items-center gap-2 px-4 py-2 rounded-pill"
+              onclick="window.location.href='../sell-my-car/index.html'"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-car-front"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm10 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6 8a1 1 0 0 0 0 2h4a1 1 0 1 0 0-2H6ZM4.862 4.276 3.906 6.19a.51.51 0 0 0 .497.731c.91-.073 2.35-.17 3.597-.17 1.247 0 2.688.097 3.597.17a.51.51 0 0 0 .497-.731l-.956-1.913A.5.5 0 0 0 10.691 4H5.309a.5.5 0 0 0-.447.276Z"
+                />
+                <path
+                  d="M2.52 3.515A2.5 2.5 0 0 1 4.82 2h6.362c1 0 1.904.596 2.298 1.515l.792 1.848c.075.175.21.319.38.404.5.25.855.715.965 1.262l.335 1.679c.033.161.049.325.049.49v.413c0 .814-.39 1.543-1 1.997V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.338c-1.292.048-2.745.088-4 .088s-2.708-.04-4-.088V13.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-1.892c-.61-.454-1-1.183-1-1.997v-.413a2.5 2.5 0 0 1 .049-.49l.335-1.68c.11-.546.465-1.012.964-1.261a.807.807 0 0 0 .381-.404l.792-1.848Z"
+                />
+              </svg>
+              Sell my car
+            </button>
+
+            <!-- Mobile Menu Toggle -->
+            <button
+              class="btn btn-outline-secondary d-lg-none"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#mobileMenu"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileMenu">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- Location Selection for Mobile -->
+        <div class="mb-4">
+          <h6 class="fw-semibold mb-2 text-muted">Location</h6>
+          <div class="dropdown w-100">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle w-100 d-flex align-items-center justify-content-between"
+              type="button"
+              data-bs-toggle="dropdown"
+            >
+              <span class="d-flex align-items-center gap-2">
+                <svg
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-geo-alt"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="m12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                  />
+                  <path
+                    d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                  />
+                </svg>
+                Abu Dhabi
+              </span>
+            </button>
+            <ul class="dropdown-menu w-100">
+              <li><a class="dropdown-item" href="#">Abu Dhabi</a></li>
+              <li><a class="dropdown-item" href="#">Dubai</a></li>
+              <li><a class="dropdown-item" href="#">Sharjah</a></li>
+              <li><a class="dropdown-item" href="#">Al Ain</a></li>
+              <li><a class="dropdown-item" href="#">Ajman</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              href="../used-cars/index.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Used cars</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="#"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >New Cars</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="../value-my-car/index.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Value my car</a
+            >
+          </li>
+          <li class="mb-2">
+            <a
+              href="#"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium"
+              >Services</a
+            >
+          </li>
+        </ul>
+
+        <hr class="my-4" />
+
+        <!-- Auth Links -->
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a
+              href="../login/index.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium d-flex align-items-center justify-content-between"
+            >
+              Login
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                />
+              </svg>
+            </a>
+          </li>
+          <li class="mb-2">
+            <a
+              href="index.html"
+              class="text-decoration-none d-block py-3 px-2 rounded text-dark fw-medium d-flex align-items-center justify-content-between"
+            >
+              Sign Up
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-arrow-up-right"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0v-6z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0">
+      <div class="login-container">
+        <div class="row g-0 h-100">
+          <!-- Left Side - Image -->
+          <div class="col-lg-6">
+            <div class="image-section"></div>
+          </div>
+
+          <!-- Right Side - Signup Form -->
+          <div class="col-lg-6">
+            <div class="form-section">
+              <!-- Mobile Signup Form (Default) -->
+              <div id="mobileSignupForm" class="login-form active">
+                <h2 class="login-title">Sign Up</h2>
+
+                <form onsubmit="handleSignup(event)">
+                  <!-- Phone Number Input -->
+                  <div class="mb-3">
+                    <label class="form-label">Enter Number</label>
+                    <div class="phone-input-container">
+                      <div class="country-code">
+                        <img
+                          src="https://flagcdn.com/w20/ae.png"
+                          alt="UAE"
+                          class="flag-icon"
+                        />
+                        <span>+971</span>
+                      </div>
+                      <input
+                        type="tel"
+                        class="form-control phone-input"
+                        placeholder="565916546"
+                        maxlength="9"
+                        id="phoneNumber"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Full Name Input -->
+                  <div class="mb-3">
+                    <label class="form-label">Full Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter your name"
+                      id="fullName"
+                    />
+                  </div>
+
+                  <!-- Email Address Input -->
+                  <div class="mb-3">
+                    <label class="form-label">Email Address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter your email address"
+                      id="emailAddress"
+                    />
+                  </div>
+
+                  <!-- Password Fields Row -->
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label class="form-label">Password</label>
+                      <div class="password-input-container">
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="Enter password"
+                          id="passwordField"
+                        />
+                        <button
+                          type="button"
+                          class="password-toggle"
+                          onclick="togglePassword()"
+                        >
+                          <i class="fas fa-eye" id="passwordIcon"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label">Confirm Password</label>
+                      <div class="password-input-container">
+                        <input
+                          type="password"
+                          class="form-control"
+                          placeholder="Enter password"
+                          id="confirmPasswordField"
+                        />
+                        <button
+                          type="button"
+                          class="password-toggle"
+                          onclick="toggleConfirmPassword()"
+                        >
+                          <i class="fas fa-eye" id="confirmPasswordIcon"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Continue Button -->
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-100 continue-btn"
+                  >
+                    Continue
+                  </button>
+
+                  <!-- Terms Text -->
+                  <div class="terms-text">
+                    By continuing, you agree to our
+                    <a href="#">Terms & Privacy Policy</a>
+                  </div>
+
+                  <!-- Login Link -->
+                  <div class="signup-link">
+                    Already have an account?
+                    <a href="../login/index.html">Sign in</a>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Email Signup Form -->
+              <div id="emailSignupForm" class="login-form">
+                <h2 class="login-title">Sign Up</h2>
+
+                <form>
+                  <div class="mb-3">
+                    <label class="form-label">Enter Email</label>
+                    <input
+                      type="email"
+                      class="form-control phone-input"
+                      placeholder="AhmedAl32@gmail.com"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Enter Password</label>
+                    <div class="password-input-container">
+                      <input
+                        type="password"
+                        class="form-control phone-input"
+                        placeholder="AhmedAl33232@"
+                        id="passwordField"
+                      />
+                      <button
+                        type="button"
+                        class="password-toggle"
+                        onclick="togglePassword()"
+                      >
+                        <i class="fas fa-eye" id="passwordIcon"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label">Confirm Password</label>
+                    <div class="password-input-container">
+                      <input
+                        type="password"
+                        class="form-control phone-input"
+                        placeholder="AhmedAl33232@"
+                        id="confirmPasswordField"
+                      />
+                      <button
+                        type="button"
+                        class="password-toggle"
+                        onclick="toggleConfirmPassword()"
+                      >
+                        <i class="fas fa-eye" id="confirmPasswordIcon"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button
+                    type="submit"
+                    class="btn btn-primary w-100 continue-btn"
+                  >
+                    Sign Up
+                  </button>
+
+                  <!-- Terms Text -->
+                  <div class="terms-text">
+                    By continuing, you agree to our
+                    <a href="#">Terms & Privacy Policy</a>
+                  </div>
+
+                  <!-- Login Link -->
+                  <div class="signup-link">
+                    Already have an account?
+                    <a href="../login/index.html">Login</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTP Method Selection Modal -->
+    <div class="modal fade" id="otpModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center px-4 pb-4">
+            <div class="otp-icon mb-3">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h5 class="modal-title mb-2">Verify Your Account</h5>
+            <p class="text-muted mb-4">
+              Choose how you'd like to receive your verification code
+            </p>
+
+            <!-- OTP Method Selection -->
+            <div class="otp-method-selection mb-4">
+              <div
+                class="method-option active"
+                onclick="selectOTPMethod('mobile')"
+                id="mobileMethod"
+              >
+                <div class="method-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="method-details">
+                  <div class="method-title">Mobile Number</div>
+                  <div class="method-value" id="mobileDisplay">
+                    +971 ********
+                  </div>
+                </div>
+                <div class="method-radio">
+                  <i class="fas fa-check-circle"></i>
+                </div>
+              </div>
+
+              <div
+                class="method-option"
+                onclick="selectOTPMethod('email')"
+                id="emailMethod"
+              >
+                <div class="method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="method-details">
+                  <div class="method-title">Email Address</div>
+                  <div class="method-value" id="emailDisplay">
+                    ****@****.com
+                  </div>
+                </div>
+                <div class="method-radio">
+                  <i class="far fa-circle"></i>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary w-100"
+              onclick="sendOTP()"
+            >
+              Send Verification Code
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTP Input Modal -->
+    <div class="modal fade" id="otpInputModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              onclick="goBackToMethodSelection()"
+              aria-label="Back"
+            ></button>
+          </div>
+          <div class="modal-body text-center px-4 pb-4">
+            <div class="otp-icon mb-3">
+              <i class="fas fa-mobile-alt" id="otpInputIcon"></i>
+            </div>
+            <h5 class="modal-title mb-2">Enter Verification Code</h5>
+            <p class="text-muted mb-4">
+              We've sent a verification code to<br />
+              <strong id="selectedMethodDisplay">+971 565916546</strong>
+              <button
+                type="button"
+                class="btn btn-link p-0 ms-2 edit-btn"
+                onclick="goBackToMethodSelection()"
+              >
+                Change
+              </button>
+            </p>
+
+            <div class="otp-inputs mb-4">
+              <input
+                type="text"
+                class="otp-input"
+                maxlength="1"
+                oninput="moveToNext(this, 0)"
+              />
+              <input
+                type="text"
+                class="otp-input"
+                maxlength="1"
+                oninput="moveToNext(this, 1)"
+              />
+              <input
+                type="text"
+                class="otp-input"
+                maxlength="1"
+                oninput="moveToNext(this, 2)"
+              />
+              <input
+                type="text"
+                class="otp-input"
+                maxlength="1"
+                oninput="moveToNext(this, 3)"
+              />
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-primary w-100 mb-3"
+              onclick="verifyOTP()"
+            >
+              Verify & Complete Signup
+            </button>
+
+            <p class="resend-text">
+              Didn't receive the code?
+              <button
+                type="button"
+                class="btn btn-link p-0 resend-btn"
+                onclick="resendOTP()"
+              >
+                Resend
+              </button>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content success-modal">
+          <div class="modal-header border-0 pb-0">
+            <h3 class="success-title w-100 text-center mb-0">
+              You're all set!
+            </h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body text-center pt-3">
+            <div class="car-illustration">
+              <!-- Car SVG Illustration -->
+              <svg viewBox="0 0 300 180" xmlns="http://www.w3.org/2000/svg">
+                <!-- Car Shadow -->
+                <ellipse
+                  cx="150"
+                  cy="160"
+                  rx="120"
+                  ry="15"
+                  fill="#000"
+                  opacity="0.1"
+                />
+
+                <!-- Main Car Body -->
+                <path
+                  d="M50 120 L50 110 Q50 100 60 100 L90 100 Q100 90 110 90 L190 90 Q200 90 210 100 L240 100 Q250 100 250 110 L250 120 L250 140 Q250 150 240 150 L60 150 Q50 150 50 140 Z"
+                  fill="#FF8C42"
+                />
+
+                <!-- Car Roof -->
+                <path
+                  d="M80 100 Q90 80 110 80 L190 80 Q210 80 220 100"
+                  fill="#FF8C42"
+                  stroke="#E67E22"
+                  stroke-width="1"
+                />
+
+                <!-- Windshield -->
+                <path
+                  d="M85 100 Q95 85 110 85 L190 85 Q205 85 215 100"
+                  fill="#87CEEB"
+                  opacity="0.8"
+                />
+
+                <!-- Side Windows -->
+                <rect
+                  x="95"
+                  y="95"
+                  width="45"
+                  height="20"
+                  rx="3"
+                  fill="#87CEEB"
+                  opacity="0.8"
+                />
+                <rect
+                  x="160"
+                  y="95"
+                  width="45"
+                  height="20"
+                  rx="3"
+                  fill="#87CEEB"
+                  opacity="0.8"
+                />
+
+                <!-- Front Grille -->
+                <rect x="45" y="115" width="8" height="15" rx="2" fill="#333" />
+                <rect x="47" y="117" width="4" height="2" fill="#666" />
+                <rect x="47" y="120" width="4" height="2" fill="#666" />
+                <rect x="47" y="123" width="4" height="2" fill="#666" />
+                <rect x="47" y="126" width="4" height="2" fill="#666" />
+
+                <!-- Headlights -->
+                <ellipse cx="55" cy="122" rx="8" ry="12" fill="#FFF" />
+                <ellipse cx="55" cy="122" rx="6" ry="10" fill="#F0F8FF" />
+
+                <!-- Taillights -->
+                <ellipse cx="245" cy="122" rx="6" ry="10" fill="#FF4444" />
+                <ellipse cx="245" cy="122" rx="4" ry="8" fill="#FF6666" />
+
+                <!-- Door Lines -->
+                <line
+                  x1="120"
+                  y1="100"
+                  x2="120"
+                  y2="140"
+                  stroke="#E67E22"
+                  stroke-width="2"
+                />
+                <line
+                  x1="180"
+                  y1="100"
+                  x2="180"
+                  y2="140"
+                  stroke="#E67E22"
+                  stroke-width="2"
+                />
+
+                <!-- Door Handles -->
+                <rect x="115" y="120" width="8" height="3" rx="1" fill="#333" />
+                <rect x="177" y="120" width="8" height="3" rx="1" fill="#333" />
+
+                <!-- Wheels -->
+                <circle cx="85" cy="150" r="20" fill="#333" />
+                <circle cx="85" cy="150" r="15" fill="#555" />
+                <circle cx="85" cy="150" r="8" fill="#777" />
+                <circle cx="85" cy="150" r="3" fill="#999" />
+
+                <circle cx="215" cy="150" r="20" fill="#333" />
+                <circle cx="215" cy="150" r="15" fill="#555" />
+                <circle cx="215" cy="150" r="8" fill="#777" />
+                <circle cx="215" cy="150" r="3" fill="#999" />
+
+                <!-- Wheel Rims -->
+                <circle
+                  cx="85"
+                  cy="150"
+                  r="12"
+                  fill="none"
+                  stroke="#AAA"
+                  stroke-width="1"
+                />
+                <circle
+                  cx="215"
+                  cy="150"
+                  r="12"
+                  fill="none"
+                  stroke="#AAA"
+                  stroke-width="1"
+                />
+
+                <!-- Side Mirror -->
+                <ellipse cx="75" cy="105" rx="4" ry="6" fill="#333" />
+                <ellipse cx="225" cy="105" rx="4" ry="6" fill="#333" />
+              </svg>
+
+              <!-- Success Checkmark -->
+              <div class="success-checkmark">
+                <i class="fas fa-check"></i>
+              </div>
+            </div>
+
+            <p class="success-subtitle mb-4">Start browsing cars now.</p>
+
+            <button
+              type="button"
+              class="btn explore-btn"
+              onclick="redirectToHome()"
+            >
+              Explore
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Company Column -->
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h6 class="fw-bold mb-3">Company</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Careers</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none">Press</a>
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none">Blog</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Used cars by location Column -->
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h6 class="fw-bold mb-3">Used cars by location</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=uae"
+                  class="text-white-50 text-decoration-none"
+                  >UAE</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=abu-dhabi"
+                  class="text-white-50 text-decoration-none"
+                  >Abu Dhabi</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=al-ain"
+                  class="text-white-50 text-decoration-none"
+                  >Al Ain</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=ajman"
+                  class="text-white-50 text-decoration-none"
+                  >Ajman</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=dubai"
+                  class="text-white-50 text-decoration-none"
+                  >Dubai</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=fujairah"
+                  class="text-white-50 text-decoration-none"
+                  >Fujairah</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=ras-al-khaimah"
+                  class="text-white-50 text-decoration-none"
+                  >Ras al-Khaimah</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=sharjah"
+                  class="text-white-50 text-decoration-none"
+                  >Sharjah</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=location&value=umm-al-quwain"
+                  class="text-white-50 text-decoration-none"
+                  >Umm al-Quwain</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular used makes Column -->
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h6 class="fw-bold mb-3">Popular used makes</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=toyota"
+                  class="text-white-50 text-decoration-none"
+                  >Toyota</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=mercedes-benz"
+                  class="text-white-50 text-decoration-none"
+                  >Mercedes-Benz</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=nissan"
+                  class="text-white-50 text-decoration-none"
+                  >Nissan</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=lexus"
+                  class="text-white-50 text-decoration-none"
+                  >Lexus</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=bmw"
+                  class="text-white-50 text-decoration-none"
+                  >BMW</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=ford"
+                  class="text-white-50 text-decoration-none"
+                  >Ford</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=land-rover"
+                  class="text-white-50 text-decoration-none"
+                  >Land Rover</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=hyundai"
+                  class="text-white-50 text-decoration-none"
+                  >Hyundai</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=make&value=chevrolet"
+                  class="text-white-50 text-decoration-none"
+                  >Chevrolet</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular used Models Column -->
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h6 class="fw-bold mb-3">Popular used Models</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=toyota-land-cruiser"
+                  class="text-white-50 text-decoration-none"
+                  >Toyota Land Cruiser</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=nissan-patrol"
+                  class="text-white-50 text-decoration-none"
+                  >Nissan Patrol</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=toyota-prado"
+                  class="text-white-50 text-decoration-none"
+                  >Toyota Prado</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=toyota-camry"
+                  class="text-white-50 text-decoration-none"
+                  >Toyota Camry</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=nissan-altima"
+                  class="text-white-50 text-decoration-none"
+                  >Nissan Altima</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=toyota-rav4"
+                  class="text-white-50 text-decoration-none"
+                  >Toyota RAV 4</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=ford-mustang"
+                  class="text-white-50 text-decoration-none"
+                  >Ford Mustang</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=toyota-corolla"
+                  class="text-white-50 text-decoration-none"
+                  >Toyota Corolla</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html?filter=model&value=toyota-hilux"
+                  class="text-white-50 text-decoration-none"
+                  >Toyota Hilux</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Site Map Column -->
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h6 class="fw-bold mb-3">Site Map</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <a
+                  href="../home/index.html"
+                  class="text-white-50 text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../used-cars/index.html"
+                  class="text-white-50 text-decoration-none"
+                  >Used Cars</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >New Cars</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../value-my-car/index.html"
+                  class="text-white-50 text-decoration-none"
+                  >Value My Car</a
+                >
+              </li>
+              <li class="mb-2">
+                <a
+                  href="../sell-my-car/index.html"
+                  class="text-white-50 text-decoration-none"
+                  >Sell My Car</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Services</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Insurance</a
+                >
+              </li>
+              <li class="mb-2">
+                <a href="#" class="text-white-50 text-decoration-none"
+                  >Finance</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Download App Column -->
+          <div class="col-lg-2 col-md-4 col-sm-6 mb-4">
+            <h6 class="fw-bold mb-3">Download App</h6>
+            <div class="d-flex flex-column gap-2">
+              <a href="#" class="text-decoration-none">
+                <img
+                  src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                  alt="Download on App Store"
+                  style="height: 40px"
+                />
+              </a>
+              <a href="#" class="text-decoration-none">
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  style="height: 60px"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <hr class="my-4 border-secondary" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="mb-0 text-white-50">
+              © 2024 7 States. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <div class="d-flex justify-content-md-end gap-3">
+              <a href="#" class="text-white-50 text-decoration-none"
+                >Privacy Policy</a
+              >
+              <a href="#" class="text-white-50 text-decoration-none"
+                >Terms of Service</a
+              >
+              <a href="#" class="text-white-50 text-decoration-none"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Global variables to store user data
+      let currentUserData = {
+        phoneNumber: "",
+        fullName: "",
+        emailAddress: "",
+        password: "",
+        selectedOTPMethod: "mobile",
+      };
+
+      // Always start with mobile signup by default
+      document.addEventListener("DOMContentLoaded", function () {
+        // Always show mobile form first, ignore any saved preferences
+        switchToMobileForm();
+      });
+
+      function switchToEmailForm() {
+        document.getElementById("mobileSignupForm").classList.remove("active");
+        document.getElementById("emailSignupForm").classList.add("active");
+
+        // Update URL and localStorage
+        const url = new URL(window.location);
+        url.searchParams.set("form", "email");
+        window.history.replaceState({}, "", url);
+        localStorage.setItem("signupFormType", "email");
+      }
+
+      function switchToMobileForm() {
+        document.getElementById("emailSignupForm").classList.remove("active");
+        document.getElementById("mobileSignupForm").classList.add("active");
+
+        // Update URL and localStorage
+        const url = new URL(window.location);
+        url.searchParams.delete("form");
+        window.history.replaceState({}, "", url);
+        localStorage.setItem("signupFormType", "mobile");
+      }
+
+      // Form switching functionality
+      document
+        .getElementById("emailSignupBtn")
+        .addEventListener("click", function () {
+          switchToEmailForm();
+        });
+
+      // Password toggle functionality
+      function togglePassword() {
+        const passwordField = document.getElementById("passwordField");
+        const passwordIcon = document.getElementById("passwordIcon");
+
+        if (passwordField.type === "password") {
+          passwordField.type = "text";
+          passwordIcon.classList.remove("fa-eye");
+          passwordIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordField.type = "password";
+          passwordIcon.classList.remove("fa-eye-slash");
+          passwordIcon.classList.add("fa-eye");
+        }
+      }
+
+      function toggleConfirmPassword() {
+        const confirmPasswordField = document.getElementById(
+          "confirmPasswordField"
+        );
+        const confirmPasswordIcon = document.getElementById(
+          "confirmPasswordIcon"
+        );
+
+        if (confirmPasswordField.type === "password") {
+          confirmPasswordField.type = "text";
+          confirmPasswordIcon.classList.remove("fa-eye");
+          confirmPasswordIcon.classList.add("fa-eye-slash");
+        } else {
+          confirmPasswordField.type = "password";
+          confirmPasswordIcon.classList.remove("fa-eye-slash");
+          confirmPasswordIcon.classList.add("fa-eye");
+        }
+      }
+
+      // Handle complete signup form
+      function handleSignup(event) {
+        event.preventDefault();
+
+        // Get form values
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        const fullName = document.getElementById("fullName").value;
+        const emailAddress = document.getElementById("emailAddress").value;
+        const password = document.getElementById("passwordField").value;
+        const confirmPassword = document.getElementById(
+          "confirmPasswordField"
+        ).value;
+
+        // Validate all fields
+        if (!phoneNumber || phoneNumber.length !== 9) {
+          alert("Please enter a valid 9-digit mobile number");
+          return;
+        }
+
+        if (!fullName.trim()) {
+          alert("Please enter your full name");
+          return;
+        }
+
+        if (!emailAddress.trim() || !isValidEmail(emailAddress)) {
+          alert("Please enter a valid email address");
+          return;
+        }
+
+        if (!password || password.length < 6) {
+          alert("Password must be at least 6 characters long");
+          return;
+        }
+
+        if (password !== confirmPassword) {
+          alert("Passwords do not match");
+          return;
+        }
+
+        // If all validations pass, prepare and show OTP method selection modal
+        prepareOTPModal(phoneNumber, emailAddress);
+        const otpModal = new bootstrap.Modal(
+          document.getElementById("otpModal")
+        );
+        otpModal.show();
+      }
+
+      // Email validation helper function
+      function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      // Prepare OTP modal with user data
+      function prepareOTPModal(phoneNumber, emailAddress) {
+        currentUserData.phoneNumber = phoneNumber;
+        currentUserData.emailAddress = emailAddress;
+
+        // Mask phone number for display (handle different lengths safely)
+        let maskedPhone;
+        if (phoneNumber.length >= 7) {
+          maskedPhone = `+971 ${phoneNumber.substring(
+            0,
+            3
+          )}****${phoneNumber.substring(7)}`;
+        } else if (phoneNumber.length >= 3) {
+          maskedPhone = `+971 ${phoneNumber.substring(0, 3)}****`;
+        } else {
+          maskedPhone = `+971 ${phoneNumber}****`;
+        }
+        document.getElementById("mobileDisplay").textContent = maskedPhone;
+
+        // Mask email for display
+        const emailParts = emailAddress.split("@");
+        const maskedEmail = `${emailParts[0].substring(
+          0,
+          Math.min(2, emailParts[0].length)
+        )}****@${emailParts[1]}`;
+        document.getElementById("emailDisplay").textContent = maskedEmail;
+
+        // Reset to mobile method as default
+        selectOTPMethod("mobile");
+      }
+
+      // Select OTP method (mobile or email)
+      function selectOTPMethod(method) {
+        currentUserData.selectedOTPMethod = method;
+
+        // Update UI
+        const mobileMethod = document.getElementById("mobileMethod");
+        const emailMethod = document.getElementById("emailMethod");
+
+        if (method === "mobile") {
+          mobileMethod.classList.add("active");
+          emailMethod.classList.remove("active");
+
+          // Update radio icons
+          mobileMethod.querySelector(".method-radio i").className =
+            "fas fa-check-circle";
+          emailMethod.querySelector(".method-radio i").className =
+            "far fa-circle";
+        } else {
+          emailMethod.classList.add("active");
+          mobileMethod.classList.remove("active");
+
+          // Update radio icons
+          emailMethod.querySelector(".method-radio i").className =
+            "fas fa-check-circle";
+          mobileMethod.querySelector(".method-radio i").className =
+            "far fa-circle";
+        }
+      }
+
+      // Send OTP to selected method
+      function sendOTP() {
+        const method = currentUserData.selectedOTPMethod;
+        const destination =
+          method === "mobile"
+            ? `+971 ${currentUserData.phoneNumber}`
+            : currentUserData.emailAddress;
+
+        // Hide method selection modal and show OTP input modal
+        const methodModal = bootstrap.Modal.getInstance(
+          document.getElementById("otpModal")
+        );
+        methodModal.hide();
+
+        // Prepare OTP input modal
+        setTimeout(() => {
+          const icon = document.getElementById("otpInputIcon");
+          const display = document.getElementById("selectedMethodDisplay");
+
+          if (method === "mobile") {
+            icon.className = "fas fa-mobile-alt";
+            display.textContent = `+971 ${currentUserData.phoneNumber}`;
+          } else {
+            icon.className = "fas fa-envelope";
+            display.textContent = currentUserData.emailAddress;
+          }
+
+          // Clear OTP inputs
+          const otpInputs = document.querySelectorAll(
+            "#otpInputModal .otp-input"
+          );
+          otpInputs.forEach((input) => (input.value = ""));
+
+          // Show OTP input modal
+          const otpInputModal = new bootstrap.Modal(
+            document.getElementById("otpInputModal")
+          );
+          otpInputModal.show();
+
+          // Focus first input
+          if (otpInputs.length > 0) {
+            otpInputs[0].focus();
+          }
+        }, 300);
+      }
+
+      // Go back to method selection
+      function goBackToMethodSelection() {
+        const otpInputModal = bootstrap.Modal.getInstance(
+          document.getElementById("otpInputModal")
+        );
+        if (otpInputModal) {
+          otpInputModal.hide();
+        }
+
+        setTimeout(() => {
+          const methodModal = new bootstrap.Modal(
+            document.getElementById("otpModal")
+          );
+          methodModal.show();
+        }, 300);
+      }
+
+      // Resend OTP
+      function resendOTP() {
+        const method = currentUserData.selectedOTPMethod;
+        alert(
+          `Verification code resent to your ${
+            method === "mobile" ? "mobile number" : "email address"
+          }`
+        );
+
+        // Clear OTP inputs
+        const otpInputs = document.querySelectorAll(
+          "#otpInputModal .otp-input"
+        );
+        otpInputs.forEach((input) => (input.value = ""));
+
+        // Focus first input
+        if (otpInputs.length > 0) {
+          otpInputs[0].focus();
+        }
+      }
+
+      // OTP Modal functionality (kept for backward compatibility)
+      function showOTPModal(event) {
+        event.preventDefault();
+        const phoneNumber = document.getElementById("phoneNumber").value;
+
+        // Validate phone number (should be 9 digits for UAE)
+        if (phoneNumber && phoneNumber.length === 9) {
+          document.getElementById("phoneDisplay").textContent =
+            "+971 " + phoneNumber;
+          const otpModal = new bootstrap.Modal(
+            document.getElementById("otpModal")
+          );
+          otpModal.show();
+        } else {
+          alert("Please enter a valid 9-digit mobile number");
+        }
+      }
+
+      function editNumber() {
+        const otpModal = bootstrap.Modal.getInstance(
+          document.getElementById("otpModal")
+        );
+        otpModal.hide();
+      }
+
+      // OTP input functionality
+      function moveToNext(current, index) {
+        // Only allow numbers
+        current.value = current.value.replace(/[^0-9]/g, "");
+
+        if (current.value.length === 1 && index < 3) {
+          const nextInput = document.querySelectorAll(".otp-input")[index + 1];
+          nextInput.focus();
+        }
+      }
+
+      // Add event listeners for OTP inputs when modal is shown
+      document
+        .getElementById("otpModal")
+        .addEventListener("shown.bs.modal", function () {
+          const otpInputs = document.querySelectorAll(".otp-input");
+
+          // Clear all inputs and focus on first
+          otpInputs.forEach((input) => (input.value = ""));
+          otpInputs[0].focus();
+
+          // Add backspace functionality
+          otpInputs.forEach((input, index) => {
+            input.addEventListener("keydown", function (e) {
+              if (e.key === "Backspace" && !input.value && index > 0) {
+                otpInputs[index - 1].focus();
+              }
+            });
+          });
+        });
+
+      // OTP Verification functionality
+      function verifyOTP() {
+        const otpInputs = document.querySelectorAll(
+          "#otpInputModal .otp-input"
+        );
+        let otp = "";
+
+        // Collect OTP from all inputs
+        otpInputs.forEach((input) => {
+          otp += input.value;
+        });
+
+        // Check if OTP is complete (4 digits)
+        if (otp.length === 4) {
+          // Simulate OTP verification (in real app, this would be an API call)
+          if (otp === "1234" || otp.length === 4) {
+            // Accept any 4-digit code for demo
+            // Hide OTP input modal
+            const otpInputModal = bootstrap.Modal.getInstance(
+              document.getElementById("otpInputModal")
+            );
+            otpInputModal.hide();
+
+            // Show success modal after a short delay
+            setTimeout(() => {
+              const successModal = new bootstrap.Modal(
+                document.getElementById("successModal")
+              );
+              successModal.show();
+            }, 300);
+          } else {
+            alert("Invalid verification code. Please try again.");
+            // Clear OTP inputs
+            otpInputs.forEach((input) => (input.value = ""));
+            if (otpInputs.length > 0) {
+              otpInputs[0].focus();
+            }
+          }
+        } else {
+          // Show error if OTP is incomplete
+          alert("Please enter the complete 4-digit verification code");
+        }
+      }
+
+      // Redirect to home page
+      function redirectToHome() {
+        window.location.href = "../home/index.html";
+      }
+
+      // Phone number formatting
+      const phoneInput = document.getElementById("phoneNumber");
+      if (phoneInput) {
+        phoneInput.addEventListener("input", function (e) {
+          let value = e.target.value.replace(/\D/g, "");
+
+          // Limit to 9 digits for UAE numbers
+          if (value.length > 9) {
+            value = value.slice(0, 9);
+          }
+
+          e.target.value = value;
+        });
+      }
+    </script>
+  </body>
+</html>
