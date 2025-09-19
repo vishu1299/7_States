@@ -1,3 +1,44 @@
 ﻿{
-  "rewrites": [{ "source": "/(.*)", "destination": "/" } ]
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/login/login.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/signup/signup.html"
+    },
+    {
+      "source": "/car-details",
+      "destination": "/car-details/car-details.html"
+    },
+    {
+      "source": "/used-cars",
+      "destination": "/used-cars/used-cars.html"
+    },
+    {
+      "source": "/sell-my-car",
+      "destination": "/sell-my-car/sell-my-car.html"
+    },
+    {
+      "source": "/value-my-car",
+      "destination": "/value-my-car/value-my-car.html"
+    },
+    {
+      "source": "/change-password",
+      "destination": "/change-password/change-password.html"
+    },
+    {
+      "source": "/forgot-password",
+      "destination": "/forgot-password/forgot-password.html"
+    }
+  ]
 }
